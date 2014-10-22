@@ -1,3 +1,5 @@
+#!/bin/bash
+set -e
 # workaround where chroot does not resolve dns with standard servers
 echo 'nameserver 208.67.222.222' > ${CHROOT_DIR}/etc/resolv.conf
 echo 'nameserver 208.67.220.220' >> ${CHROOT_DIR}/etc/resolv.conf
@@ -16,4 +18,4 @@ cd ../
 make -C v4l/
 sudo make
 ls
-ls /v4l
+ls v4l/
