@@ -8,10 +8,12 @@ apt-get -y install patchutils libproc-processtable-perl git make gcc
 cd media_build
 ./build --main-git
 cd media
-wget https://gist.githubusercontent.com/mkassner/10134241/raw/58a48f0e05c85f85a5be41a6207e0d0aebc51ac9/mjepg_bandwidth.patch
+wget https://gist.githubusercontent.com/BrianAdams/a558717b9ede409414fa/raw/386e935bc3fce743632d529d7c85c985e9747ffc/mjepg_bandwidth.patch
 pwd
 ls
 git apply mjepg_bandwidth.patch
 cd ../
 make -C v4l/
 sudo make
+ls
+ls /v4l
