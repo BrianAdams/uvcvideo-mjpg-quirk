@@ -43,10 +43,6 @@ function setup_arm_chroot {
 
     sudo mount -o bind /proc ${CHROOT_DIR}/proc
 
-    # workaround where chroot does not resolve dns with standard servers
-    sudo echo 'nameserver 208.67.222.222' > ${CHROOT_DIR}/etc/resolv.conf
-    sudo echo 'nameserver 208.67.220.220' >> ${CHROOT_DIR}/etc/resolv.conf
-
     # Indicate chroot environment has been set up
     sudo touch ${CHROOT_DIR}/.chroot_is_done
 

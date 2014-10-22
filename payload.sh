@@ -1,4 +1,8 @@
-sudo apt-get install patchutils libproc-processtable-perl git
+# workaround where chroot does not resolve dns with standard servers
+echo 'nameserver 208.67.222.222' > ${CHROOT_DIR}/etc/resolv.conf
+echo 'nameserver 208.67.220.220' >> ${CHROOT_DIR}/etc/resolv.conf
+
+apt-get install patchutils libproc-processtable-perl git
 git clone git://linuxtv.org/media_build.git
 cd media_build
 ./build --main-git
